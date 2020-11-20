@@ -1,2 +1,21 @@
-.vscode/
+.vscode
+myenv
+# Python
+*.pyc
+*~
 __pycache__
+
+# Env
+.env
+myvenv
+venv/
+
+db.sqlite3
+
+# Static folder
+static/
+
+# Visual Studio
+.vscode/
+.history/
+*.code-workspace
