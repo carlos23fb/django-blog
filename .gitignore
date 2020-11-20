@@ -19,3 +19,5 @@ static/
 .vscode/
 .history/
 *.code-workspace
+
+.vscode
