@@ -1,9 +1,7 @@
 db.sqlite3
 myenv
 # Python
-*.pyc
 *~
-__pycache__
 
 # Env
 .env
