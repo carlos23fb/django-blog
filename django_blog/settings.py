@@ -26,7 +26,8 @@ SECRET_KEY = 'zslfkk(e#o4*_+xg$-3%+o7u76p8g(o!%nht)$1m&%qe&yvp!i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com',
+                 'https://django-blog-girls.herokuapp.com/']
 
 
 # Application definition
