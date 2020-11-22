@@ -1,28 +1,8 @@
 *.pyc
-blog/migrations/__pycache__/__init__.cpython-38.pyc
-*.pyc
-blog/__pycache__/
 db.sqlite3
-myenv
-# Python
-*~
-
-# Env
-.env
-myvenv
-venv/
-
-db.sqlite3
-
-# Static folder
 static/
-
-# Visual Studio
 .vscode/
 .history/
 *.code-workspace
-
-.vscode
-
 blog/migrations/__pycache__/__init__.cpython-38.pyc
-/blog/migrations/__pycache__
+blog/migrations/__pycache__
