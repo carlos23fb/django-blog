@@ -1,20 +1,11 @@
-<html>
-  <head>
-    <title>Django Girls blog</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-  </head>
-  <body>
-    <div>
-      <h1><a href="/">Django Blog</a></h1>
-    </div>
+{% extends "blog/layout.html" %}
+{% block body %}
+{% for post in post %}
+<div class="posts">
+  <p>Publicado: {{post.published_date}}</p>
+  <h2><a href=""> {{post.title}} </a></h2>
+  <p>{{post.text | linebreaksbr}}</p>
+</div>
+{% endfor %}
+{% endblock body %}
 
-    {% for post in post %}
-    <div>
-      <p>Publicado: {{post.published_date}}</p>
-      <h2><a href=""> {{post.title}} </a></h2>
-      <p> {{post.text | linebreaksbr}} </p>
-    </div>
-    {% endfor %}
-  </body>
-</html>
