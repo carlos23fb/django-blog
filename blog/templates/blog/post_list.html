@@ -2,8 +2,8 @@
 {% block body %}
 {% for post in post %}
 <div class="posts">
-  <p>Publicado: {{post.published_date}}</p>
-  <h2><a href=""> {{post.title}} </a></h2>
+  <p>Publicado: {{post.published_date}} Id: {{post.pk}}</p>
+  <h2><a href=" {% url 'post_detail' pk=post.pk %} "> {{post.title}} </a></h2>
   <p>{{post.text | linebreaksbr}}</p>
 </div>
 {% endfor %}
