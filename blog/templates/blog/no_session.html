@@ -1,0 +1,11 @@
+{% extends "blog/layout.html" %}
+
+{% block body %}
+  {% if message %}
+  <div class="alert alert-warning" role="alert">
+  {{message}}
+</div>
+<a href="{% url 'post_list' %}"> Back to home page </a>
+<a href="{% url 'login' %}"> Login </a>
+{% endif %}
+{% endblock body %}

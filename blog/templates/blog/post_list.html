@@ -1,11 +1,18 @@
-{% extends "blog/layout.html" %}
-{% block body %}
+{% extends "blog/layout.html"%} {% block body %} 
 {% for post in post %}
-<div class="posts">
-  <p>Publicado: {{post.published_date}} Id: {{post.pk}}</p>
-  <h2><a href=" {% url 'post_detail' pk=post.pk %} "> {{post.title}} </a></h2>
-  <p>{{post.text | linebreaksbr}}</p>
-</div>
-{% endfor %}
-{% endblock body %}
 
+<div class="card">
+  <div class="post" style="width: auto">
+  <div class="card-body">
+  <h6 class="card-subtitle mb-2 text-muted">Publicado: {{post.published_date}}</h6>
+  <h4 class="card-title"><a href=" {% url 'post_detail' pk=post.pk %} "> {{post.title}} </a></h4>
+  <p class="card-text">{{post.text | truncatewords:25}}</p>
+  <a href="{% url 'post_detail' pk=post.pk %}" class="card-link">Read more..</a>
+  </div>
+</div>
+</div>
+<br>
+<br>
+
+{% endfor %} 
+{% endblock body %}
