@@ -1,4 +1,6 @@
 *.pyc
+blog/migrations/__pycache__/__init__.cpython-38.pyc
+*.pyc
 blog/__pycache__/
 db.sqlite3
 myenv
@@ -21,3 +23,6 @@ static/
 *.code-workspace
 
 .vscode
+
+blog/migrations/__pycache__/__init__.cpython-38.pyc
+/blog/migrations/__pycache__
