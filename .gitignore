@@ -1,8 +1,8 @@
 *.pyc
+*~
+__pycache__
+myvenv
 db.sqlite3
-static/
-.vscode/
-.history/
-*.code-workspace
-blog/migrations/__pycache__/__init__.cpython-38.pyc
-blog/migrations/__pycache__
+/static
+.DS_Store
+.vscode
