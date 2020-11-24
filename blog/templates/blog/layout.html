@@ -35,8 +35,11 @@
     <a href="{% url 'post_new' %}" class="top-menu" style="color: black">
 </svg><button type="button" class="btn btn-outline-info">Add New
 Post</button></a>
+<a href="{% url 'perfil' %}" class="top-menu" style="color: black">
+</svg><button type="button" class="btn btn-succes">Profile</button></a>
 <a href="{% url 'logout' %}" class="top-menu" style="color: black">
 </svg><button type="button" class="btn btn-danger">Logout</button></a>
+
     {% else %}
     <a href="{% url 'login' %}" class="top-menu" style="color: black">
 </svg><button type="button" class="btn btn-outline-primary">Login</button></a>

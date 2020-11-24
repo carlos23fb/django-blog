@@ -90,3 +90,12 @@ def logout_view(request):
     return render(request, 'blog/login.html', {
         "logout_message": "Logged Out"
     })
+
+
+def perfil(request):
+    if not request.user.is_authenticated:
+        return render(request, "blog/no_session.html", {
+            "message": "Necesitas iniciar sesion para ver esta pagina"
+        })
+    else:
+        return render(request, "blog/perfil.html")
