@@ -83,3 +83,10 @@ def login_view(request):
             })
 
     return render(request, "blog/login.html")
+
+
+def logout_view(request):
+    logout(request)
+    return render(request, 'blog/login.html', {
+        "logout_message": "Logged Out"
+    })

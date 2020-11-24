@@ -1,27 +1,31 @@
-
-  {% extends "blog/layout.html"%} {% block body %} 
+{% extends "blog/layout.html"%} {% block body %}
+<br />
+<h1>
+  Products >> <span class="badge badge-secondary">Add items to order</span>
+</h1>
+<br />
+<div class="content">
   <div class="row">
-    
-  {% for post in post %}
+    {% for post in post %}
 
     <div class="col-lg-4">
       <div class="card">
         <div class="card-body">
-          <h6 class="card-subtitle mb-2 text-muted">
-            Publicado: {{post.published_date}}
-          </h6>
+          
           <h4 class="card-title">
             <a href=" {% url 'post_detail' pk=post.pk %} "> {{post.title}} </a>
           </h4>
-          <p class="card-text">{{post.text | truncatewords:25}}</p>
+          <p class="card-text">{{post.text | truncatewords:50 }}</p>
+          <h6 class="card-subtitle mb-2 text-muted">
+            Publicado: {{post.published_date}}
+          </h6>
           <a href="{% url 'post_detail' pk=post.pk %}" class="card-link"
-            >Read more..</a
-          >
+            >Read more..</a>
         </div>
       </div>
     </div>
-
-
-{% endfor %} 
+    
+    {% endfor %}
+  </div>
+</div>
 {% endblock body %}
-

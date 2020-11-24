@@ -1,6 +1,16 @@
 {% extends "blog/layout.html" %}
 
 {% block body %}
+{% if logout_message %}
+<div class="alert alert-info" role="alert">
+  {{logout_message}}
+</div>
+{% endif %}
+{% if message %}
+<div class="alert alert-danger" role="alert">
+  {{message}}
+</div>
+{% endif %}
   <form method="POST" action="{% url 'login' %}">
       {% csrf_token %}
   <div class="form-group">
