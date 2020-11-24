@@ -6,9 +6,14 @@
 <br />
 
 <div class="content container">
-
-
-
+<h5> Username:</h5>
+<p> {{request.user.username}} </p>
+<br>
+<h5>Full Name:</h5>
+<p> {{request.user.first_name}} {{request.user.last_name}} </p>
+<br>
+<h5>Email:</h5>
+<p>{{request.user.email}}</p>
 </div>
 
 
